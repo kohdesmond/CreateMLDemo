@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageCheck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Chicken_Rice" translatesAutoresizingMaskIntoConstraints="NO" id="1Yz-qB-W3L">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6k-qu-O7Y">
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="WN9-52-ZHo">
+                                        <rect key="frame" x="17.5" y="69" width="340" height="62"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is the image?                           " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hc2-dU-CdV">
+                                                <rect key="frame" x="0.0" y="0.0" width="340" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accuracy " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SiK-Eu-zEy">
+                                                <rect key="frame" x="127" y="38" width="86.5" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6l-yj-4ec">
+                                        <rect key="frame" x="8" y="160" width="120" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Select a photo"/>
+                                        <connections>
+                                            <action selector="takePicture" destination="BYZ-38-t0r" eventType="touchUpInside" id="t1y-4H-7KC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXg-MD-04N">
+                                        <rect key="frame" x="227" y="160" width="140" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Real Time Scanning"/>
+                                        <connections>
+                                            <action selector="realTimeScanning" destination="BYZ-38-t0r" eventType="touchUpInside" id="ieE-jg-9uU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="WN9-52-ZHo" firstAttribute="centerX" secondItem="a6k-qu-O7Y" secondAttribute="centerX" id="QHY-fW-Qdt"/>
+                                    <constraint firstItem="WN9-52-ZHo" firstAttribute="centerY" secondItem="a6k-qu-O7Y" secondAttribute="centerY" id="dmo-OM-6X4"/>
+                                    <constraint firstAttribute="height" constant="200" id="wPx-Fd-20u"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1Yz-qB-W3L" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NIF-XH-lLC"/>
+                            <constraint firstItem="1Yz-qB-W3L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QNJ-ms-yuM"/>
+                            <constraint firstItem="a6k-qu-O7Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WPh-f5-tWC"/>
+                            <constraint firstItem="a6k-qu-O7Y" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WQr-Xm-JQy"/>
+                            <constraint firstItem="1Yz-qB-W3L" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="WTy-xw-Qwg"/>
+                            <constraint firstItem="1Yz-qB-W3L" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hjx-g8-qYX"/>
+                            <constraint firstItem="a6k-qu-O7Y" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hvr-y1-Ypv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="S6l-yj-4ec" id="H6I-g7-vhy"/>
+                        <outlet property="imageAccuracy" destination="SiK-Eu-zEy" id="Ikw-ks-2Dx"/>
+                        <outlet property="imageName" destination="hc2-dU-CdV" id="her-Wn-24g"/>
+                        <outlet property="imageView" destination="1Yz-qB-W3L" id="bi3-3B-UUC"/>
+                        <outlet property="realTimeButton" destination="sXg-MD-04N" id="Wkq-qI-vGU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141.59999999999999" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Chicken_Rice" width="236" height="352"/>
+    </resources>
+</document>
